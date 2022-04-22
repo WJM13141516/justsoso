@@ -1,0 +1,21 @@
+name: zzujksb_push
+
+on:
+    workflow_dispatch:
+    schedule:
+    - cron: '10 16 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check
+        uses: actions/checkout@v2
+    
+      - name: Run
+        env:
+            UID: ${{secrets.UID}}
+            UPW: ${{secrets.UPW}}
+            TOKEN: ${{secrets.TOKEN}}
+        run: bash ./autopush.sh $UID $UPW $TOKEN
+     

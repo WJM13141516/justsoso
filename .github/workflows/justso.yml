@@ -3,7 +3,7 @@ name: zzujksb
 on:
     workflow_dispatch:
     schedule:
-    - cron: '10 19 * * *'
+    - cron: '30 16 * * *'
 
 jobs:
   build:
@@ -35,4 +35,3 @@ jobs:
           to: ${{secrets.RECEIVE_MAIL}}
           from: 郑州大学数据中台
           convert_markdown: true
-          content_type: txt/html 
