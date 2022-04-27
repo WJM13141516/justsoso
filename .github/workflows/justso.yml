@@ -3,7 +3,7 @@ name: zzujksb
 on:
     workflow_dispatch:
     schedule:
-    - cron: '30 16 * * *'
+    - cron: '30 17 * * *'
 
 jobs:
   build:
